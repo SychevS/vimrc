@@ -29,8 +29,10 @@ set ignorecase
 
 "folding (zo - fold open; zc -fold close)
 set foldenable
-set foldmethod=indent
-set foldlevel=0
+set foldmethod=marker
+set foldmarker={,}
+set foldlevel=10
+
 
 "mappings
 imap [ []<LEFT>

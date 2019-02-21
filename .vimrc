@@ -12,6 +12,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'scrooloose/nerdtree'
 Plugin 'universal-ctags/ctags'
+Plugin 'vim-scripts/Conque-GDB'
 
 " colorschemes
 Plugin 'lifepillar/vim-solarized8'
@@ -77,3 +78,5 @@ map <F6> :TlistToggle<CR>
 map <F12> :YcmCompleter GoToDefinition<CR>
 map <leader>jd :YcmCompleter GoToDeclaration<CR>
 map <leader>ji :YcmCompleter GoToInclude<CR>
+map <leader>jt :YcmCompleter GoTo<CR>
+map <F7> :ConqueGdb<CR>

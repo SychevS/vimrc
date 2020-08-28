@@ -12,7 +12,6 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'scrooloose/nerdtree'
 Plugin 'universal-ctags/ctags'
-Plugin 'vim-scripts/Conque-GDB'
 
 " colorschemes
 Plugin 'lifepillar/vim-solarized8'
@@ -33,8 +32,8 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
-let g:ycm_use_clangd = "Always"
-let g:ycm_clangd_binary_path = "~/ycm_temp/llvm_root_dir/bin/clangd"
+"let g:ycm_use_clangd = "Always"
+"let g:ycm_clangd_binary_path = "~/.vim/bundle/YouCompleteMe/third_party/ycmd/third_party/clangd/output/bin/clangd"
 let g:ycm_server_python_interpreter = "/usr/bin/python"
 
 "encoding
@@ -57,13 +56,15 @@ set autoindent
 
 "setup
 set nu
+set ru
 set ignorecase
+set backspace=indent,eol,start
 
 "folding (zo - fold open; zc -fold close)
 set foldenable
 set foldmethod=marker
 set foldmarker={,}
-set foldlevel=10
+set foldlevel=100
 
 "mappings
 imap [ []<LEFT>
@@ -79,4 +80,3 @@ map <F12> :YcmCompleter GoToDefinition<CR>
 map <leader>jd :YcmCompleter GoToDeclaration<CR>
 map <leader>ji :YcmCompleter GoToInclude<CR>
 map <leader>jt :YcmCompleter GoTo<CR>
-map <F7> :ConqueGdb<CR>

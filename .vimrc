@@ -9,7 +9,7 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'Valloric/YouCompleteMe'
+"Plugin 'Valloric/YouCompleteMe'
 Plugin 'scrooloose/nerdtree'
 Plugin 'universal-ctags/ctags'
 
@@ -34,7 +34,7 @@ filetype plugin indent on    " required
 
 "let g:ycm_use_clangd = "Always"
 "let g:ycm_clangd_binary_path = "~/.vim/bundle/YouCompleteMe/third_party/ycmd/third_party/clangd/output/bin/clangd"
-let g:ycm_server_python_interpreter = "/usr/bin/python"
+"let g:ycm_server_python_interpreter = "/usr/bin/python"
 
 "encoding
 set encoding=utf8
@@ -77,6 +77,6 @@ map <F4> :tabnext<CR>
 map <F5> :tabnew<CR>
 map <F6> :TlistToggle<CR>
 map <F12> :YcmCompleter GoToDefinition<CR>
-map <leader>jd :YcmCompleter GoToDeclaration<CR>
-map <leader>ji :YcmCompleter GoToInclude<CR>
-map <leader>jt :YcmCompleter GoTo<CR>
+"map <leader>jd :YcmCompleter GoToDeclaration<CR>
+"map <leader>ji :YcmCompleter GoToInclude<CR>
+"map <leader>jt :YcmCompleter GoTo<CR>

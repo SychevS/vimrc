@@ -12,6 +12,7 @@ Plugin 'VundleVim/Vundle.vim'
 "Plugin 'Valloric/YouCompleteMe'
 Plugin 'scrooloose/nerdtree'
 Plugin 'universal-ctags/ctags'
+Plugin 'davidhalter/jedi-vim'
 
 " colorschemes
 Plugin 'lifepillar/vim-solarized8'

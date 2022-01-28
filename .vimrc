@@ -59,6 +59,7 @@ set nu
 set ru
 set ignorecase
 set backspace=indent,eol,start
+set noswapfile
 
 "folding (zo - fold open; zc -fold close)
 set foldenable

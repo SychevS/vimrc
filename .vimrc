@@ -12,10 +12,10 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
-Plugin 'davidhalter/jedi-vim'
 Plugin 'morhetz/gruvbox'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
+Plugin 'ycm-core/YouCompleteMe'
 
 call vundle#end()
 
@@ -48,6 +48,7 @@ set noswapfile
 set mousehide
 set hlsearch
 set splitright
+set completeopt-=preview
 
 "folding (zo - fold open; zc -fold close)
 set foldenable
@@ -55,9 +56,13 @@ set foldmethod=marker
 set foldmarker={,}
 set foldlevel=100
 
-let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsExpandTrigger="<F1>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+
+imap { {<CR>}<Esc>ko
+imap ( ()<Esc>i
+imap [ []<Esc>i
 
 map <TAB> %
 map <F2> :NERDTreeToggle<CR>
@@ -65,4 +70,4 @@ map <F3> :tabprev<CR>
 map <F4> :tabnext<CR>
 map <F5> :tabnew<CR>
 map <F6> :set hlsearch! hlsearch?<CR>
-map <F9> :w<CR>:vert term<CR>g++ -fsanitize=address -std=c++17 -Wall -Wextra -Wshadow -O2 -o out *.cpp<CR>./out<CR>
+map <F9> :w<CR>:vert term<CR>g++ -std=c++17 -Wall -Wextra -Wshadow -O2 -o out *.cpp<CR>./out<CR>

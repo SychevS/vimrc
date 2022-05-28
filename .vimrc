@@ -17,6 +17,7 @@ Plugin 'derekwyatt/vim-fswitch'
 Plugin 'ycm-core/YouCompleteMe'
 Plugin 'SirVer/ultisnips'
 Plugin 'mhinz/vim-startify'
+Plugin 'vim-airline/vim-airline'
 
 "YCM install Ubuntu 20.04:
 "sudo apt install build-essential cmake python3-dev
@@ -43,6 +44,8 @@ let g:startify_lists = [
       \ { 'type': 'files',     'header': ['   MRU']            },
       \ { 'type': 'dir',       'header': ['   MRU '. getcwd()] },
       \ ]
+
+let g:airline_section_c = '%F'
 
 filetype plugin indent on
 
@@ -100,7 +103,7 @@ map <F5> :tabnew<CR>
 map <F6> :set hlsearch! hlsearch?<CR>
 map <F7> :%s/<C-r>"//gc<left><left><left>
 map <F8> :grep -rnI "<C-r>"" .<CR>:copen<CR>/<C-r>"<CR>
-"map <F9> :w<CR>:make '%:p:h'<CR><CR>:vert copen 60<CR>
+"map <F9> :w<CR>:make '%:p:h'<CR>:copen<CR>
 "map <F9> :w<CR>:vert term<CR>g++ -std=c++17 -Wall -Wextra -Wshadow -O2 -o out *.cpp<CR>./out < inp.txt<CR>
 map <F10> :wa<CR>:tabdo NERDTreeClose<CR>:SSave! last-session<CR>:qall<CR>
 
